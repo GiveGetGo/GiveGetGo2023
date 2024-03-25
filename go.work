@@ -3,4 +3,7 @@ go 1.22.0
 use (
     ./servers/user
     ./servers/verification
+    ./servers/post
+    ./servers/bid
+    ./servers/match
 )

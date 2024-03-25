@@ -53,16 +53,6 @@ type PostCategory struct {
 	CategoryID uint `gorm:"primaryKey;autoIncrement:false"`
 }
 
-type Bid struct {
-	BidID           uint `gorm:"primaryKey"`
-	PostID          uint `gorm:"index"`
-	UserID          uint `gorm:"index"`
-	BidDescription  string
-	TermsConditions string
-	DateSubmitted   time.Time
-	Status          string `gorm:"type:enum('Submitted', 'Accepted', 'Rejected');default:'Submitted'"`
-}
-
 type Feedback struct {
 	FeedbackID uint `gorm:"primaryKey"`
 	FromUserID uint `gorm:"index"`
@@ -79,15 +69,6 @@ type Exchange struct {
 	AgreementDetails string
 	ExchangeDate     time.Time
 	ExchangeStatus   string `gorm:"type:enum('Planned', 'Completed', 'Cancelled');default:'Planned'"`
-}
-
-type Match struct {
-	MatchID            uint   `gorm:"primaryKey"`
-	NeedPostID         uint   `gorm:"index"`
-	HelperUserID       uint   `gorm:"index"`
-	MatchStatus        string `gorm:"type:enum('Matching', 'Matched', 'Unfulfilled');default:'Matching'"`
-	DateMatched        time.Time
-	FulfillmentDetails string
 }
 
 type Notification struct {

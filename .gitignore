@@ -5,6 +5,10 @@ client_web/node_modules
 # .env files
 servers/user/.env.user
 servers/verification/.env.verification
+servers/post/.env.post
+servers/bid/.env.bid
+servers/match/.env.match
+servers/redis/.env.redis
 .env
 
 # config files
